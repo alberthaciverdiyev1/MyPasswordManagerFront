@@ -12,5 +12,6 @@ exRoute.route('/').get(login.index);
 exRoute.route('/notes').get(note.listAllNotes);
 exRoute.route('/passwords-list').get(password.listAllPasswords);
 exRoute.route('/profile').get(account.profile);
+exRoute.route('/forgot-password').get(account.forgotPassword);
 
 module.exports = exRoute;
