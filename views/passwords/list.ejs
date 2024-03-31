@@ -1,0 +1,104 @@
+<%- include('../layouts/header') %>
+    <%- include('../layouts/navbar') %>
+        <div class="container mx-auto py-8">
+            <div class="bg-white rounded-lg shadow-lg p-4 sm:p-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h1 class="text-xl font-semibold">Password List</h1>
+                    <button id="addPasswordButton" class="bg-blue-500 text-white px-4 py-2 rounded">Add
+                        Password</button>
+                    <input type="text" class="search px-4 py-2 rounded border border-gray-300" placeholder="Search...">
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full whitespace-nowrap border border-gray-300">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 text-left bg-gray-200 border-r border-gray-300">No</th>
+                                <th class="px-4 py-2 text-left bg-gray-200 border-r border-gray-300">Site Name</th>
+                                <th class="px-4 py-2 text-left bg-gray-200 border-r border-gray-300">Password</th>
+                                <th class="px-4 py-2 text-left bg-gray-200 border-r border-gray-300">Created At</th>
+                                <th class="px-4 py-2 text-left bg-gray-200 border-r border-gray-300">Updated At</th>
+                                <th class="px-4 py-2 text-left bg-gray-200">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">1</td>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">ExampleSite.com
+                                </td>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">********</td>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">2024-04-01</td>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">2024-04-01</td>
+                                <td class="px-4 py-2 border-b border-gray-300">
+                                    <button
+                                        class="update-btn bg-green-500 text-white px-4 py-2 rounded mr-2">Update</button>
+                                    <button
+                                        class="delete-btn bg-red-500 text-white px-4 py-2 rounded mr-2">Delete</button>
+                                </td>
+                            </tr>
+                            <!-- Yeni veri -->
+                            <tr>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">2</td>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">AnotherSite.com
+                                </td>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">********</td>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">2024-04-02</td>
+                                <td class="px-4 py-2 border-b border-gray-300 border-r border-gray-300">2024-04-02</td>
+                                <td class="px-4 py-2 border-b border-gray-300">
+                                    <button
+                                        class="update-btn bg-green-500 text-white px-4 py-2 rounded mr-2">Update</button>
+                                    <button
+                                        class="delete-btn bg-red-500 text-white px-4 py-2 rounded mr-2">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include('../layouts/passwordAddModal') %>
+        <%- include('../layouts/deleteModal') %>
+        <%- include('../layouts/footer') %>
+
+            <script>
+                const addPasswordButton = document.getElementById('addPasswordButton');
+                const addPasswordModal = document.getElementById('addPasswordModal');
+                const closeModalButton = document.getElementById('closeModalButton');
+
+                addPasswordButton.addEventListener('click', () => {
+                    addPasswordModal.classList.remove('hidden');
+                });
+
+                closeModalButton.addEventListener('click', () => {
+                    addPasswordModal.classList.add('hidden');
+                });
+
+                const deleteButtons = document.querySelectorAll('.delete-btn');
+                const deleteConfirmationModal = document.getElementById('deleteConfirmationModal');
+                const confirmDeleteButton = document.getElementById('confirmDeleteButton');
+                const cancelDeleteButton = document.getElementById('cancelDeleteButton');
+
+                function showDeleteConfirmationModal() {
+                    deleteConfirmationModal.classList.remove('hidden');
+                }
+
+                function hideDeleteConfirmationModal() {
+                    deleteConfirmationModal.classList.add('hidden');
+                }
+
+                deleteButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        showDeleteConfirmationModal();
+                    });
+                });
+
+                confirmDeleteButton.addEventListener('click', () => {
+                    console.log('Item deleted!');
+                    hideDeleteConfirmationModal();
+                });
+
+                cancelDeleteButton.addEventListener('click', () => {
+                    hideDeleteConfirmationModal();
+                });
+            </script>
