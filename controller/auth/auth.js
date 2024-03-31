@@ -1,5 +1,5 @@
 const index = (req,res)=>{
-    res.render('auth/login')
+    res.render('auth/login',{js:'auth/auth.js'})
 }
 const action = (req,res) =>{
 

@@ -1,5 +1,5 @@
 const express = require('express');
-const login = require("../controller/auth/login");
+const login = require("../controller/auth/auth");
 const password= require("../controller/password/all");
 const account= require("../controller/auth/account");
 const note= require("../controller/note/all");

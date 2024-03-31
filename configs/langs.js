@@ -8,7 +8,9 @@ az = {
     "Profile" : "Profil",
     "Password" : "Şifrə",
     "Passwords":"Şifrələr",
-    "Confirm Password" : "Şifrəni təsdiqlə"
+    "Confirm Password" : "Şifrəni təsdiqlə",
+    "Write Something..." : "Bir Şey Yazın",
+    "Add Note" : "Qeyd Əlavə Et"
 
 }
 
@@ -22,7 +24,9 @@ ru = {
     "Profile" : "Профиль",
     "Password" : "<PASSWORD>",
     "Passwords":"<PASSWORD>",
-    "Confirm Password" : "<PASSWORD>"
+    "Confirm Password" : "<PASSWORD>",
+    "Write Something..." : "Напишите что-нибудь...",
+    "Add Note" : "Добавить Заметку",
 }
 
 tr = {
@@ -35,7 +39,9 @@ tr = {
     "Profile" : "Profil",
     "Password" : "Şifre",
     "Passwords":"Şifreler",
-    "Confirm Password" : "<PASSWORD>"
+    "Confirm Password" : "<PASSWORD>",
+    "Write Something..." : "Bir şeyler yazın...",
+    "Add Note" : "Not Ekle",
 }
 
 // fr = {

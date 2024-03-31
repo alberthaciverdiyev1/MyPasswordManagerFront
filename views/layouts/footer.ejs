@@ -5,17 +5,7 @@
       <span>&copy; 2024 MyPasswordManager</span>
     </div>
   </footer>
-  
-  <script>
-    function toggleForms() {
-      var loginForm = document.getElementById('loginFormContainer');
-      var registerForm = document.getElementById('registerForm');
-      
-      loginForm.classList.toggle('hidden');
-      registerForm.classList.toggle('hidden');
-    }
-  </script>
-  
+  <script src="<%= typeof js !== 'undefined' ? `/js/${js}` : ''%>"></script>
   </body>
   </html>
   
