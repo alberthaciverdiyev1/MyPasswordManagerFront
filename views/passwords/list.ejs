@@ -6,7 +6,8 @@
                     <h1 class="text-xl font-semibold">Password List</h1>
                     <button id="addPasswordButton" class="bg-blue-500 text-white px-4 py-2 rounded">Add
                         Password</button>
-                    <input type="text" class="search px-4 py-2 rounded border border-gray-300" placeholder="Search...">
+                    <button id="addPasswordButton" class="bg-yellow-500 text-white px-4 py-2 rounded">Import Password From File</button>
+                    <input type="text" class="search px-6 py-2 rounded border border-gray-300" placeholder="Search...">
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full whitespace-nowrap border border-gray-300">
@@ -58,47 +59,47 @@
 
 
         <%- include('../layouts/passwordAddModal') %>
-        <%- include('../layouts/deleteModal') %>
-        <%- include('../layouts/footer') %>
+            <%- include('../layouts/deleteModal') %>
+                <%- include('../layouts/footer') %>
 
-            <script>
-                const addPasswordButton = document.getElementById('addPasswordButton');
-                const addPasswordModal = document.getElementById('addPasswordModal');
-                const closeModalButton = document.getElementById('closeModalButton');
+                    <script>
+                        const addPasswordButton = document.getElementById('addPasswordButton');
+                        const addPasswordModal = document.getElementById('addPasswordModal');
+                        const closeModalButton = document.getElementById('closeModalButton');
 
-                addPasswordButton.addEventListener('click', () => {
-                    addPasswordModal.classList.remove('hidden');
-                });
+                        addPasswordButton.addEventListener('click', () => {
+                            addPasswordModal.classList.remove('hidden');
+                        });
 
-                closeModalButton.addEventListener('click', () => {
-                    addPasswordModal.classList.add('hidden');
-                });
+                        closeModalButton.addEventListener('click', () => {
+                            addPasswordModal.classList.add('hidden');
+                        });
 
-                const deleteButtons = document.querySelectorAll('.delete-btn');
-                const deleteConfirmationModal = document.getElementById('deleteConfirmationModal');
-                const confirmDeleteButton = document.getElementById('confirmDeleteButton');
-                const cancelDeleteButton = document.getElementById('cancelDeleteButton');
+                        const deleteButtons = document.querySelectorAll('.delete-btn');
+                        const deleteConfirmationModal = document.getElementById('deleteConfirmationModal');
+                        const confirmDeleteButton = document.getElementById('confirmDeleteButton');
+                        const cancelDeleteButton = document.getElementById('cancelDeleteButton');
 
-                function showDeleteConfirmationModal() {
-                    deleteConfirmationModal.classList.remove('hidden');
-                }
+                        function showDeleteConfirmationModal() {
+                            deleteConfirmationModal.classList.remove('hidden');
+                        }
 
-                function hideDeleteConfirmationModal() {
-                    deleteConfirmationModal.classList.add('hidden');
-                }
+                        function hideDeleteConfirmationModal() {
+                            deleteConfirmationModal.classList.add('hidden');
+                        }
 
-                deleteButtons.forEach(button => {
-                    button.addEventListener('click', () => {
-                        showDeleteConfirmationModal();
-                    });
-                });
+                        deleteButtons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                showDeleteConfirmationModal();
+                            });
+                        });
 
-                confirmDeleteButton.addEventListener('click', () => {
-                    console.log('Item deleted!');
-                    hideDeleteConfirmationModal();
-                });
+                        confirmDeleteButton.addEventListener('click', () => {
+                            console.log('Item deleted!');
+                            hideDeleteConfirmationModal();
+                        });
 
-                cancelDeleteButton.addEventListener('click', () => {
-                    hideDeleteConfirmationModal();
-                });
-            </script>
+                        cancelDeleteButton.addEventListener('click', () => {
+                            hideDeleteConfirmationModal();
+                        });
+                    </script>
