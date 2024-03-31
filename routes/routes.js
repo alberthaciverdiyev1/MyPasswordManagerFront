@@ -8,7 +8,7 @@ const exRoute = express.Router();
 // app.use(exRoute);
 
 exRoute.route('/').get(login.index);
-exRoute.route('/passwords-list').get(note.listAllNotes);
-exRoute.route('/notes').get(password.listAllPasswords);
+exRoute.route('/notes').get(note.listAllNotes);
+exRoute.route('/passwords-list').get(password.listAllPasswords);
 
 module.exports = exRoute;

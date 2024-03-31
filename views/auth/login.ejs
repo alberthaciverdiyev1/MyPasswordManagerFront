@@ -1,19 +1,13 @@
 <%- include('../layouts/header') %>
 <%- include('../layouts/navbar') %>
-
-<!-- Header -->
-
-
 <!-- Main Content (2 Columns) -->
 <div class="container mx-auto px-8 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-  <!-- Sol Sütun (Tanıtım) -->
   <div class="flex justify-center items-center">
     <div class="p-6 rounded-md shadow-md bg-white">
       <h2 class="text-3xl font-semibold text-gray-800 mb-4">MyPasswordManager</h2>
       <p class="text-lg text-gray-600">We are here for secure and easy password management. Keep your passwords safe with MyPasswordManager and access with a single click.</p>
     </div>
   </div>
-  <!-- Sağ Sütun (Giriş) -->
   <div>
     <div class="login-card p-4" id="loginFormContainer">
       <!-- Login Form -->
@@ -32,12 +26,11 @@
           <a href="#" class="text-blue-500">Forgot Password?</a>
         </div>
       </form>
-      <!-- Üye Ol Bağlantısı -->
       <div class="text-center mt-4">
         <a href="#" class="text-blue-500" onclick="toggleForms()">Sign Up</a>
       </div>
     </div>
-    <!-- Kayıt Formu -->
+    <!-- Register Form -->
     <div class="login-card p-4 hidden" id="registerForm">
       <form>
         <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Sign Up</h2>       
@@ -48,7 +41,6 @@
           <button type="submit" class="custom-button hover:bg-blue-700 text-white font-bold py-2 px-4 w-full rounded-md">Sign Up</button>
         </div>
       </form>
-      <!-- Giriş Yap Bağlantısı -->
       <div class="text-center">
         <a href="#" class="text-blue-500" onclick="toggleForms()">Login</a>
       </div>

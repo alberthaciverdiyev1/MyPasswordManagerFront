@@ -1,90 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f3f4;
-        }
-
-        .notes-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .note {
-            width: 300px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .note-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .note-title {
-            margin: 0;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .delete-btn {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #666;
-        }
-
-        .delete-btn:hover {
-            color: #333;
-        }
-
-        .note-content {
-            padding: 10px;
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
-    <%- include('../layouts/header') %>
-    <%- include('../layouts/navbar') %>
-
-    <div class="notes-container">
-        <div class="note">
-            <div class="note-header">
-                <h2 class="note-title">Shopping List</h2>
-                <button class="delete-btn">×</button>
+<%- include('../layouts/header') %>
+<%- include('../layouts/navbar') %>
+<div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="col-span-2">
+            <div class="add-note-container mt-8 mb-4">
+                <input type="text" class="add-note-input px-4 py-2 border border-gray-300 rounded-md mr-2 focus:outline-none focus:border-blue-500"
+                    placeholder="Not ekleyin...">
+                <button class="add-note-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Not Ekle</button>
             </div>
-            <p class="note-content">- Milk</p>
-            <p class="note-content">- Bread</p>
-            <p class="note-content">- Eggs</p>
-        </div>
-        <div class="note">
-            <div class="note-header">
-                <h2 class="note-title">Meeting Notes</h2>
-                <button class="delete-btn">×</button>
+            <div class="notes-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="note bg-white rounded-lg shadow-md p-4">
+                    <div class="note-header flex justify-between items-center mb-4">
+                        <h2 class="note-title text-lg font-semibold">Alışveriş Listesi</h2>
+                        <button class="delete-btn text-red-500 hover:text-red-700">&times;</button>
+                        <button class="pin-btn">&#128204;</button>
+                    </div>
+                    <p class="note-content">- Süt</p>
+                    <p class="note-content">- Ekmek</p>
+                    <p class="note-content">- Yumurta</p>
+                </div>
+                <div class="note bg-white rounded-lg shadow-md p-4">
+                    <div class="note-header flex justify-between items-center mb-4">
+                        <h2 class="note-title text-lg font-semibold">Toplantı Notları</h2>
+                        <button class="delete-btn text-red-500 hover:text-red-700">&times;</button>
+                        <button class="pin-btn">&#128204;</button>
+                    </div>
+                    <p class="note-content">- Proje zaman çizelgesini tartış</p>
+                    <p class="note-content">- Görevleri ata</p>
+                    <p class="note-content">- Sonraki toplantı tarihini belirle</p>
+                </div>
+                <!-- Daha fazla not ekleyin -->
             </div>
-            <p class="note-content">- Discuss project timeline</p>
-            <p class="note-content">- Assign tasks</p>
-            <p class="note-content">- Set next meeting date</p>
         </div>
-        <!-- Add more notes here -->
     </div>
+</div>
 
-    <%- include('../layouts/footer') %>
-</body>
-</html>
+<%- include('../layouts/footer') %>
