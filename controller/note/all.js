@@ -1,4 +1,7 @@
-const Register = (req, res) => {
-    res.render('Auth/register', { css: 'user-auth.css' });
+const listAllNotes = (req, res) => {
+    res.render('notes/list');
   };
   
+  module.exports = {
+    listAllNotes
+  }

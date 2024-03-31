@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f3f4;
+        }
+
+        .notes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .note-title {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .delete-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #666;
+        }
+
+        .delete-btn:hover {
+            color: #333;
+        }
+
+        .note-content {
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../layouts/header') %>
+    <%- include('../layouts/navbar') %>
+
+    <div class="notes-container">
+        <div class="note">
+            <div class="note-header">
+                <h2 class="note-title">Shopping List</h2>
+                <button class="delete-btn">×</button>
+            </div>
+            <p class="note-content">- Milk</p>
+            <p class="note-content">- Bread</p>
+            <p class="note-content">- Eggs</p>
+        </div>
+        <div class="note">
+            <div class="note-header">
+                <h2 class="note-title">Meeting Notes</h2>
+                <button class="delete-btn">×</button>
+            </div>
+            <p class="note-content">- Discuss project timeline</p>
+            <p class="note-content">- Assign tasks</p>
+            <p class="note-content">- Set next meeting date</p>
+        </div>
+        <!-- Add more notes here -->
+    </div>
+
+    <%- include('../layouts/footer') %>
+</body>
+</html>
