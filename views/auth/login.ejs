@@ -14,13 +14,16 @@
       <form id="loginForm">
         <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Login</h2>       
         <div class="mb-4">
-          <input type="email" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Email" required="required">
-          <input type="password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Password" required="required">
-          <button type="submit" class="custom-button hover:bg-blue-700 text-white font-bold py-2 px-4 w-full rounded-md">Login</button>
-        </div>
+          <label class="hidden text-red-500 ml-3" for="login-email">This input cannot be empty</label>
+          <input type="email" id="login-email" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Email" required="required">
+          <label class="hidden text-red-500 ml-3" for="login-password">This input cannot be empty</label>
+          <input type="password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Password" id="login-password" required="required">
+          <button type="button" class="custom-button hover:bg-blue-700 text-white font-bold py-2 px-4 w-full rounded-md" data-role="login">Login</button>
+      </div>
+      
         <div class="flex justify-between">
           <label class="inline-flex items-center">
-            <input type="checkbox" class="form-checkbox text-blue-500 border-2 border-blue-500 rounded-sm">
+            <input type="checkbox" data-role="login-remember-me" class="form-checkbox text-blue-500 border-2 border-blue-500 rounded-sm">
             <span class="ml-1 text-gray-800">Remember me</span>
           </label>
           <a href="/forgot-password" class="text-blue-500">Forgot Password?</a>
@@ -35,10 +38,10 @@
       <form>
         <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Sign Up</h2>       
         <div class="mb-4">
-          <input type="email" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Email" required="required">
-          <input type="password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Password" required="required">
-          <input type="confirm_password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Confirm Password" required="required">
-          <button type="submit" class="custom-button hover:bg-blue-700 text-white font-bold py-2 px-4 w-full rounded-md">Sign Up</button>
+          <input type="email" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Email" data-role="register-email" required="required">
+          <input type="password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Password" data-role="register-password" required="required">
+          <input type="confirm_password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Confirm Password" data-role="register-confirm-password" required="required">
+          <button type="button" class="custom-button hover:bg-blue-700 text-white font-bold py-2 px-4 w-full rounded-md" data-role="register">Sign Up</button>
         </div>
       </form>
       <div class="text-center">

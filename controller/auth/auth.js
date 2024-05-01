@@ -1,9 +1,12 @@
 const index = (req,res)=>{
     res.render('auth/login',{js:'auth/auth.js'})
 }
-const action = (req,res) =>{
-
+const login = (req,res) =>{
+    console.log(req.body);
+}
+const register = (req,res) =>{
+    console.log(req.body);
 }
 module.exports = {
-    index,action
+    index,login,register
 }

@@ -5,7 +5,8 @@
       <span>&copy; 2024 MyPasswordManager</span>
     </div>
   </footer>
-  <script src="<%= typeof js !== 'undefined' ? `/js/${js}` : ''%>"></script>
-  </body>
+  <script type="module" src="/js/helpers/validate.js"></script>
+<script  type="module" src="<%= typeof js !== 'undefined' ? `/js/${js}` : ''%>"></script>
+</body>
   </html>
   
