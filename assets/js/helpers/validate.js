@@ -12,6 +12,8 @@ export function checkEmpty(data) {
                 document.getElementById(data[key].id).classList.add("border-gray-300");
                 document.querySelector(`label[for="${data[key].id}"]`).classList.add("hidden");
                 return_array[key] = data[key].value;
+                // return_array.push({ [key]: data[key] });
+
             }
         })
         return return_array;
