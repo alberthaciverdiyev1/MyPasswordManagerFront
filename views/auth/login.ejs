@@ -38,9 +38,12 @@
       <form>
         <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Sign Up</h2>       
         <div class="mb-4">
-          <input type="email" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Email" data-role="register-email" required="required">
-          <input type="password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Password" data-role="register-password" required="required">
-          <input type="confirm_password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Confirm Password" data-role="register-confirm-password" required="required">
+          <label class="hidden text-red-500 ml-3" for="register-email">This input cannot be empty</label>
+          <input type="email" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Email" id="register-email" required="required">
+          <label class="hidden text-red-500 ml-3" for="register-password">This input cannot be empty</label>
+          <input type="password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Password" id="register-password" required="required">
+          <label class="hidden text-red-500 ml-3" for="register-confirm-password">This input cannot be empty</label>
+          <input type="password" class="form-input block w-full border border-gray-300 rounded-md py-2 px-4 mb-2" placeholder="Confirm Password" id="register-confirm-password" required="required">
           <button type="button" class="custom-button hover:bg-blue-700 text-white font-bold py-2 px-4 w-full rounded-md" data-role="register">Sign Up</button>
         </div>
       </form>
