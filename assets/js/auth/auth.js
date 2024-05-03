@@ -29,10 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
         let rawData = {
             email: document.getElementById(`register-email`),
             password: document.getElementById(`register-password`),
-            confirm_password: document.getElementById(`register-confirm-password`),
+            confirmPassword: document.getElementById(`register-confirm-password`),
         };
        let data = checkEmpty(rawData);
-        if(compareData([rawData["confirm_password"], rawData["password"]], true)){
+        // if(compareData([rawData["confirm_password"], rawData["password"]], true)){
+            if(true){
             fetch('/register', {
                 method: 'POST',
                 headers: {
